@@ -20,7 +20,22 @@ function formatCurrencyBRL(value) {
     return value
 }
 
+
+//captura o submit do formulário para obter valores
 form.onsubmit = (event) => {
+    
+    //previne o comportamento padrão de recarregar a página
     event.preventDefault()
+
+    const newExpanse = {
+        id: new Date().getTime(),
+        expense: expense.value,
+        category_id: category.value,
+        category_name: category.options[category.selectedIndex].text,
+        amount: amount.value,
+        created_at: new Date()
+    }
+
+    console.log(newExpanse)
 
 }
