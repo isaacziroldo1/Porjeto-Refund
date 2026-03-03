@@ -35,7 +35,15 @@ form.onsubmit = (event) => {
         amount: amount.value,
         created_at: new Date()
     }
+    expandAdd(newExpanse)
 
-    console.log(newExpanse)
+}
 
+function expandAdd(newExpanse) {
+    try {
+        alert("Despesa adcionada!!!")
+    } catch (error) {
+        alert("Não foi possível atualizar a lista de despesas.")
+        console.log(error)
+    }
 }
